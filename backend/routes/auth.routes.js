@@ -5,7 +5,7 @@ import {login,signup,logout} from "../controllers/auth.controllers.js"
 
 routes.get("/login",login)
 
-routes.get("/signup",signup)
+routes.post("/signup",signup)
 
 routes.get("/logout",logout)
 
