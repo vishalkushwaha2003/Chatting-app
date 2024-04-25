@@ -3,10 +3,10 @@ const routes=express();
 
 import {login,signup,logout} from "../controllers/auth.controllers.js"
 
-routes.get("/login",login)
+routes.post("/login",login)
 
 routes.post("/signup",signup)
 
-routes.get("/logout",logout)
+routes.post("/logout",logout)
 
 export default routes

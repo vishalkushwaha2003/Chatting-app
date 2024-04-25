@@ -5,9 +5,39 @@ import generateTokenAndSetCookie from "../utils/generateToken.js"
 
 
 
-export const login=(req,res)=>{
-    res.send("login page");
+export const login=async(req,res)=>{
+     try
+     {
+      const {userName,password}=req.body;
+      const user= await User.findOne({userName})
+      const decryptPassword= await bcrypt.compare(password,user?.password||"")
+
+      if(!user||!decryptPassword)
+      {
+        return res.status(400).json({error:"Invalid credencial"})
+      }
+
+      generateTokenAndSetCookie(user._id,res);
+      res.status(201).json({
+        fullName:user.fullName,
+        userName:user.userName,
+        profilePic:user.profilePic
+
+      })
+
+
+
+
+     }
+     catch(error)
+     {
+      console.log("error in login ,",error.message);
+      res.status(500).json({error:"internal server error"})   
+     }
 }
+
+   
+
 export const signup=async(req,res)=>{
       try{
           const {fullName,userName,password,confirmPassword,gender}=req.body;
@@ -54,6 +84,17 @@ export const signup=async(req,res)=>{
 
       }
 }
+
+
 export const logout=(req,res)=>{
-    res.send("logout page");
+   try
+   {
+       res.cookie("jwt","",{maxAge:"0"})
+       res.status(201).json({message:"logout successfully"});
+   }
+   catch(error)
+   {
+    console.log("error in logout ,",error.message);
+    res.status(500).json({error:"internal server error"})   
+   }
 }
