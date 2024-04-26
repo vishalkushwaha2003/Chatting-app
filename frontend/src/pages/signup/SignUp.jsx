@@ -7,14 +7,51 @@ function SignUp() {
     //   <div className='relative flex justify-center items-center w-350px h-350px '>jkjkjn</div>
     // </div>
     <>
+
+ <div className='flex  gap-[20px]'>
+
+
+
+{/* password div start*****************************************************************/}
+<div className='ml-[250px] mt-[250px]' >
+
+<div class="container">
+<div class="drop1" >
+  <div class="content1">
+   
+   <form class="form1" >
+    <div class="inputBox1">
+      <input type="password" placeholder="password" />
+    </div>
+    <div class="inputBox1">
+      <input type="password"  placeholder="re-password"/>
+    </div>
+   
+   </form>
+  </div>
+</div>
+</div>
+</div>
+ 
+{/* passwor div end ********************************************************************/}
+
+
+
+{/* signup div start*********************************************************************** */}
+
+<div className='flex justify-center' >
+    
      
-  <div class="container">
+
+    <div className='mt-[60px]'>
+
+    <div class="container" >
     <div class="drop">
       <div class="content">
-       <h2>sign up</h2>
-       <form >
+       <h2>Sign up</h2>
+       <form class="form">
         <div class="inputBox">
-          <input type="text" placeholder="full-name" />
+          <input type="text" placeholder="user-name" />
         </div>
         <div class="inputBox">
           <input type="password"  placeholder="password"/>
@@ -26,6 +63,69 @@ function SignUp() {
       </div>
     </div>
   </div>
+    </div>
+
+
+<div class="signup">
+
+     <input type="submit" value="Login"/>
+
+</div>
+
+
+
+    </div>
+
+
+
+  {/* signup div end******************************************************************* */}  
+
+
+
+
+{/* gender div start***************************************************************** */}
+
+
+ <div className='mr-[100px] mt-[200px]  '>
+
+ <div class="signup" >
+
+     <input type="submit" value="Male"/>
+
+</div>
+
+<div class="signup">
+
+     <input type="submit" value="Female"/>
+
+</div>
+
+
+
+{/* <div class="container">
+<div class="drop1" >
+  <div class="content1">
+   
+   <form class="form1" >
+    <div class="inputBox1">
+      <input type="password" placeholder="password" />
+    </div>
+    <div class="inputBox1">
+      <input type="password"  placeholder="re-password"/>
+    </div>
+   
+   </form>
+  </div>
+</div>
+</div> */}
+</div>
+
+
+{/* gender div end***************************************************************************** */}
+
+    </div>
+  
+
     </>
   )
 }
