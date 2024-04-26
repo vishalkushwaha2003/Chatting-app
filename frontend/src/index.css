@@ -2,3 +2,159 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background:url("/water_image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+}
+
+
+.container
+{   
+    /* backdrop-filter: blur(0px); */
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.container .drop
+{  
+    position:relative;
+    width:350px;
+    height:350px;
+    box-shadow:inset 20px 20px 20px rgba(13, 20, 20, 0.562),25px 35px 20px rgba(14, 23, 27, 0.699),25px 30px 20px rgba(18, 50, 63, 0.315),inset -20px -20px 25px rgba(6, 145, 155, 0.473);
+    transition:0.7s;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border-radius:30% 70% 64% 36% / 43% 39% 61% 57% ;
+    
+}
+
+.container .drop:hover{
+ border-radius:38% 62% 54% 46% / 55% 51% 49% 45% ;
+}
+
+.container .drop::before{
+    filter:blur(4px);
+    content:'';
+    position:absolute;
+    top:50px;
+    left:90px;
+    width:35px;
+    height:35px;
+    background:rgba(144, 228, 253, 0.5);
+    border-radius:50%;
+}
+
+.container .drop::after{
+    filter:blur(4px);
+    content:'';
+    position:absolute;
+    top:90px;
+    left:125px;
+    width:15px;
+    height:15px;
+    background:rgba(148, 240, 243, 0.452);
+    border-radius:50%;
+}
+.container .drop .content
+{    
+    position:absolute;
+    height:200px;
+    width:200px;
+    
+   
+    
+   
+    
+ 
+   
+    
+
+}
+
+.container .drop .content h2
+{
+   position:relative;
+   left:50px;
+   bottom:5px;
+   color:#010003;
+   font-size:2em;
+   font-weight: 700;
+}
+
+.container .drop .content form{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    
+}
+
+.container .drop .content form .inputBox{
+    position:relative;
+    width:225px;
+    height:40px;
+    top:15px;
+    right:20px;
+   
+
+    box-shadow:inset 10px 10px 10px rgba(13, 20, 20, 0.562),8px 8px 15px rgba(14, 23, 27, 0.699),15px 25px 10px rgba(18, 50, 63, 0.315),inset -10px -10px 15px rgba(6, 145, 155, 0.473);
+    border-radius: 29% 71% 72% 28% / 45% 50% 50% 55%    ;
+    transition:0.7s;
+}
+
+.container .drop .content form .inputBox:hover
+{
+  border-radius:40px;
+}
+.container .drop .content form .inputBox input{
+    border:none;
+    font-weight: 500;
+    
+    
+    outline:none;
+    background:transparent;
+    width:100%;
+    padding:10px 25px;
+    
+}
+.container .drop .content form .inputBox input::placeholder{
+    color: black;
+}
+
+.container .drop .content form .login{
+
+    background:transparent;
+    
+    position:relative;
+   
+    padding:5px 25px;
+    width:100px;
+    height:40px;
+    left:20px;
+    top:10px;
+    color:black;
+    font-size: 20px;
+    font-weight: 700;
+
+    box-shadow:inset 10px 10px 10px rgba(13, 20, 20, 0.562),8px 8px 15px rgba(14, 23, 27, 0.699),15px 25px 10px rgba(18, 50, 63, 0.315),inset -10px -10px 15px rgba(6, 145, 155, 0.473);
+    border-radius: 29% 71% 72% 28% / 45% 50% 50% 55%    ;
+    transition:0.7s;
+
+
+}
+.container .drop .content form .login:hover{
+    border-radius:40px;
+}
+
+
+
+

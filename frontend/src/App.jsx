@@ -1,13 +1,12 @@
 import React from 'react'
-import bgimage from "./assets/water_image.jpg"
+import SignUp from './pages/signup/SignUp'
+
 
 function App() {
   return (
-    <>
-  <div className=''>
-   <img src={bgimage} alt="water drops" className='w-screen h-screen bg-cover'/> 
-  </div>
-    </>
+    <div className='w-screen h-screen'>
+    <SignUp/>
+    </div>
   )
 }
 
