@@ -304,4 +304,29 @@ body{
 }
 
 
+::-webkit-scrollbar{
+    width:5px;
+}
+
+::-webkit-scrollbar-track{
+    background:#19a0a52a;
+    border-radius:10px;
+    
+    
+
+}
+::-webkit-scrollbar-thumb{
+   
+    background:#242424d5;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#121212;
+    width:5px;
+    
+    cursor:-webkit-grab
+}
+
+
 

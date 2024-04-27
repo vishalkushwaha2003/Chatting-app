@@ -7,7 +7,7 @@ import Home from './pages/home/Home'
 function App() {
   return (
     <div className='w-screen h-screen'>
-    <Home/>
+    <Home />
    
     {/* <SignUp/> */}
     {/* <Login/> */}
