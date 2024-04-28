@@ -50,8 +50,18 @@ export const signup=async(req,res)=>{
           if(user){
             return res.status(400).json({error:"user already exist"})
           }
-          const salt=await bcrypt.genSalt(10);
-          const hashPassword =await bcrypt.hash(password,salt)
+          const salt=await bcrypt.genSalt(5).catch((error)=>{
+            console.log("error in salt ,",error.message);
+            throw new Error("error in salt");
+          });
+          console.log(userName)
+          const hashPassword =await bcrypt.hash(password,salt).catch((error)=>{
+            console.log("error in hashPassword ,",error.message)
+            throw new Error("error in hashPassword")
+            
+          })
+           
+
 
           const boyProfilePic=`https://avatar.iran.liara.run/public/boy?username=${userName}`
           const girlProfilePic=`https://avatar.iran.liara.run/public/girl?username=${userName}`
