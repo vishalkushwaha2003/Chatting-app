@@ -1,7 +1,32 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import useSignUp from '../../hooks/useSignup'
 
 
 function SignUp() {
+
+    const [inputs,setInputs]  = useState({
+      fullName:'',
+      userName:'',
+      password:'',
+      confirmPassword:'',
+      gender:'',
+    })
+    
+      const {loading,signup}=useSignUp();
+
+      const handleSubmit=async (e)=>{
+          e.preventDefault();
+           await signup(inputs);
+           console.log(inputs)
+          
+      }
+
+
+    
+
+
   return (
     // <div className='flex justify-center items-center min-h-100vh bg-red-600'>
     //   <div className='relative flex justify-center items-center w-350px h-350px '>jkjkjn</div>
@@ -21,10 +46,10 @@ function SignUp() {
    
    <form class="form1" >
     <div class="inputBox1">
-      <input type="password" placeholder="password" />
+      <input type="password" placeholder="password" value={inputs.password} onChange={(e)=>setInputs({...inputs, password: e.target.value})}/>
     </div>
     <div class="inputBox1">
-      <input type="password"  placeholder="re-password"/>
+      <input type="password"  placeholder="re-password" value={inputs.confirmPassword} onChange={(e)=>setInputs({...inputs,confirmPassword:e.target.value})}/>
     </div>
    
    </form>
@@ -39,7 +64,7 @@ function SignUp() {
 
 {/* signup div start*********************************************************************** */}
 
-<div className='flex justify-center' >
+<div className='flex ' >
     
      
 
@@ -49,15 +74,15 @@ function SignUp() {
     <div class="drop">
       <div class="content">
        <h2>Sign up</h2>
-       <form class="form">
+       <form class="form" onSubmit={handleSubmit}>
         <div class="inputBox">
-          <input type="text" placeholder="user-name" />
+          <input type="text" placeholder="full-name" value={inputs.fullName} onChange={(e)=>setInputs({...inputs, fullName: e.target.value})}/>
         </div>
         <div class="inputBox">
-          <input type="password"  placeholder="password"/>
+          <input type="text"  placeholder="user-name" value={inputs.userName} onChange={(e)=>setInputs({...inputs,userName:e.target.value})}/>
         </div>
         <div class="login" >
-          <input type="submit" value="login"/>
+          <input type="submit" value="submit"/>
         </div>
        </form>
       </div>
@@ -68,7 +93,7 @@ function SignUp() {
 
 <div class="signup">
 
-     <input type="submit" value="Login"/>
+    <Link to={'/login'}><input type="text" value="Login"/> </Link> 
 
 </div>
 
@@ -90,13 +115,14 @@ function SignUp() {
 
  <div class="signup" >
 
-     <input type="submit" value="Male"/>
+     <input type="submit" value="male" onClick={(e)=>setInputs({...inputs,gender:e.target.value})}/>
+     
 
 </div>
 
 <div class="signup">
 
-     <input type="submit" value="Female"/>
+     <input type="submit" value="female" onClick={(e)=>setInputs({...inputs,gender:e.target.value})}/>
 
 </div>
 

@@ -245,7 +245,7 @@ body{
     
     position:relative;
    
-    padding:5px 25px;
+    padding:5px 15px;
     width:100px;
     height:40px;
     left:20px;
@@ -260,8 +260,12 @@ body{
 
 
 }
+.login input{
+    cursor: pointer;
+}
 .container .drop .content .form .login:hover{
     border-radius:40px;
+   
 }
 
 
@@ -281,12 +285,15 @@ body{
 
     box-shadow:inset 10px 10px 10px rgba(13, 20, 20, 0.562),8px 8px 15px rgba(14, 23, 27, 0.699),15px 25px 10px rgba(18, 50, 63, 0.315),inset -10px -10px 15px rgba(6, 145, 155, 0.473);
     border-radius: 29% 71% 72% 28% / 45% 50% 50% 55%    ;
-    transition:0.7s;
+    transition:all 0.7s ;
 }
 
 .signup:hover
 {
   border-radius:47% 53% 50% 50% / 47% 25% 75% 53% ;
+ 
+  scale:1.1;
+  
 }
 
 
@@ -300,8 +307,17 @@ body{
     background:transparent;
     width:100%;
     padding:25px 25px;
+    cursor:pointer;
+    transition:all 0.5s ;
+
     
 }
+.signup input:hover{
+    
+    scale:1.1;
+}
+
+
 
 
 ::-webkit-scrollbar{

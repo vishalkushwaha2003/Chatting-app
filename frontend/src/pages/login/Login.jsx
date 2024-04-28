@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Login() {
   return (
     <>
-  <div className='flex justify-center' >
+    
+  <div className='flex justify-center ' >
     
      
 
@@ -32,7 +34,7 @@ function Login() {
 
 <div class="signup">
 
-     <input type="submit" value="sign up"/>
+    <Link to={'/signup'}> <input type="submit" value="sign up"/></Link>
 
 </div>
 
