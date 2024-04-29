@@ -16,6 +16,8 @@ function SignUp() {
     
       const {loading,signup}=useSignUp();
 
+      
+
       const handleSubmit=async (e)=>{
           e.preventDefault();
            await signup(inputs);
@@ -58,7 +60,7 @@ function SignUp() {
 </div>
 </div>
  
-{/* passwor div end ********************************************************************/}
+{/* password div end ********************************************************************/}
 
 
 
@@ -82,7 +84,8 @@ function SignUp() {
           <input type="text"  placeholder="user-name" value={inputs.userName} onChange={(e)=>setInputs({...inputs,userName:e.target.value})}/>
         </div>
         <div class="login" >
-          <input type="submit" value="submit"/>
+          <input type="submit" value={loading?"   🧐":"submit"}/>
+          
         </div>
        </form>
       </div>
