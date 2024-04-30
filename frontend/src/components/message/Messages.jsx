@@ -29,7 +29,7 @@ function Messages() {
      
       
       {!loading&&messages.length==0&&(
-        <p className='text-center '>Send the message to start the conversation</p>
+        <p className='text-center text-black  text-[25px]'>Send a message to start the conversation 👍</p>
       )}
       
       
