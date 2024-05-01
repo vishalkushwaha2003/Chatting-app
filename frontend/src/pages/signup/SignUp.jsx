@@ -14,6 +14,16 @@ function SignUp() {
       gender:'',
     })
     
+      
+     const isMale=inputs?.gender==="male";
+     const isFemale=inputs?.gender==="female"
+
+
+
+
+
+
+
       const {loading,signup}=useSignUp();
 
       
@@ -96,7 +106,7 @@ function SignUp() {
 
 <div class="signup">
 
-    <Link to={'/login'}><input type="text" value="Login"/> </Link> 
+    <Link to={'/login'}><input type="submit" value="Login"/> </Link> 
 
 </div>
 
@@ -116,14 +126,14 @@ function SignUp() {
 
  <div className='mr-[100px] mt-[200px]  '>
 
- <div class="signup" >
+ <div class={`signup ${isMale?"addColor":""}`}>
 
      <input type="submit" value="male" onClick={(e)=>setInputs({...inputs,gender:e.target.value})}/>
      
 
 </div>
 
-<div class="signup">
+<div class={`signup ${isFemale?"addColor":""}`}>
 
      <input type="submit" value="female" onClick={(e)=>setInputs({...inputs,gender:e.target.value})}/>
 

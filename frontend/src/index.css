@@ -162,6 +162,7 @@ body{
 
 .container .drop .content .form .inputBox {
     position:relative;
+    color:black;
     width:225px;
     height:40px;
     top:15px;
@@ -183,6 +184,7 @@ body{
 
 .container .drop1 .content1 .form1 .inputBox1 {
     position:relative;
+    color:black;
     width:150px;
     height:40px;
     top:45px;
@@ -315,6 +317,11 @@ body{
 .signup input:hover{
     
     scale:1.1;
+}
+
+
+.addColor{
+    background-color: rgb(0, 81, 255);
 }
 
 
