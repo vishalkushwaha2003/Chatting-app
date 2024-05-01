@@ -10,7 +10,7 @@ import messageRoutes from "./routes/message.routes.js"
 import userRoutes from "./routes/user.routes.js"
 import cookieparser from "cookie-parser";
 
-const app=express();
+import {app,server,io} from './soket/socket.js'
 
 dotenv.config();
 
@@ -34,7 +34,7 @@ app.use("/api/users",userRoutes)
 
 
 
-app.listen(PORT,()=>{
+server.listen(PORT,()=>{
     connectToMongoDB();
     console.log(`listen on port ${PORT}`)
 })
