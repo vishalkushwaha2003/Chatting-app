@@ -17,15 +17,17 @@ function Message({message}) {
 
                   const trueshake=message.shake;
   return (
-    <div className={`chat ${chatClassName}`}>
+    <div className={`  chat ${chatClassName}`}>
         <div className='chat-image avatar'>
            <div className='w-8 rounded-full'>
             <img src={profilePic} alt="tailwind css chat bubble component" />
 
            </div>
         </div>
-         <div className={`chat-bubble text-black ${trueshake?"shake":""} ${fromMe?bubbleBgColor:"bg-fuchsia-300"} `}>
+         
+         <div className={`chat-bubble flex-1 px-5    break-words text-black  ${trueshake?"shake":""} ${fromMe?bubbleBgColor:"bg-fuchsia-300"} `}>
                   {message.message}
+        
          </div>
          <div className='chat-footer opecity-50 text-xs flex gap-1 item-center text-black'>{extractTime(message.createdAt)}</div>
     </div>
