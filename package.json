@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "server": "nodemon backend/server.js"
+    "server": "nodemon backend/server.js",
+    "start": "node backend/server.js",
+    "build":"npm install && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "type": "module",
   "keywords": [],
@@ -23,5 +25,8 @@
     "nodemon": "^3.1.0",
     "nvm": "^0.0.4",
     "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "daisyui": "^4.10.2"
   }
 }
